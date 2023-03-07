@@ -35,3 +35,12 @@ header {
     font-size: 3rem;
     margin: 0.5rem;
 }
+
+.wrongGuess {
+    border-color: red;
+    color: red;
+}
+.rightGuess {
+    border-color: green;
+    color: green;
+}

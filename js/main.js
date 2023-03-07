@@ -71,15 +71,15 @@ function takeUserPrompts(){
     }while(userNumbers.length<5)
 }
 
+// funzione che controlla i numeri inseriti dall'utente e verifica quali sono corretti
 function checkUserPrompts(){
     let correctNumbers = 0;
     for (i=0; i<numbersList.length; i++){
         if (numbersList.includes(parseInt(myNumbers[i].innerHTML))){
-            myNumbers[i].style.border = "3px solid green";
+            myNumbers[i].classList.add('rightGuess');
             correctNumbers ++;
         } else {
-            myNumbers[i].style.border = "3px solid red";
+            myNumbers[i].classList.add('wrongGuess')
         } 
     }
-    alert('Hai indovinato '+correctNumbers+' numeri.');
 }
