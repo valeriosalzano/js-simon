@@ -1,6 +1,6 @@
 // Visualizzare in pagina 5 numeri casuali. Da lì parte un timer di 30 secondi.
 
-const numbersList = createNumbersList(1,10,5);
+const numbersList = createNumbersList(1,100,5);
 
 const numbersContainerDom = document.getElementById('numbers-container');
 
@@ -13,7 +13,7 @@ for (i=0; i<numbersList.length; i++){
 
 const myNumbers = document.querySelectorAll('.myNumber');
 // Dopo 30 secondi i numeri scompaiono e l’utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-let timerSeconds = 3;
+let timerSeconds = 30;
 // creo un timer che dopo "timerSeconds" secondi cancella i numeri 
 setTimeout( hideNumbers, timerSeconds*1000);
 
@@ -23,7 +23,9 @@ setTimeout ( takeUserPrompts, (timerSeconds+1)*1000);
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 setTimeout ( checkUserPrompts, (timerSeconds+2)*1000);
 
-// LISTA FUNZIONI
+
+
+// *** LISTA FUNZIONI ***
 
 // funzione che restituisce un numero randomico in un range che va da min a max
 function randomNumber (min, max){
